@@ -1,0 +1,45 @@
+@import "base";
+@import "layout";
+@import "components";
+@import "mixins";
+
+// main
+
+.container {
+    // overflow: hidden;
+    // width: 100%;
+    background-color: #f5f5f5;
+
+    @include  breakpoint (mobile) {
+        background-color: orange;
+
+        @include flexCHV;
+    }
+}
+
+.main {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    @include flexCHV;
+
+    @include  breakpoint (mobile) {
+        height: 100vh;
+    }
+    
+    .box {
+        background-color: aqua;
+        flex: 0 0 calc(33.333% - 50px);
+        margin: 5px;
+        padding: 10px;
+        height: 300px;
+        width: 300px;
+        @include flexCHV;
+
+        @include  breakpoint (mobile) {
+            height: 185px;
+            width: 150px;
+        }
+    }
+}
+
