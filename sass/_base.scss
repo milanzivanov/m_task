@@ -1,4 +1,6 @@
-:root {
+@import "mixins";
+
+root {
     --color-primary: #fff;
 }
 
@@ -17,18 +19,23 @@
 
 html {
     box-sizing: border-box;
-    // font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+    font-size: 2rem;
 }
 
 body {
     background-color: var(--color-primary);
     font-weight: 400;
     font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
 }
 
 .wrapper {
     max-width: 1200px;
     margin: auto;
+    height: 100%;
+    width: 100%;
+
+    @include  breakpoint (mobile) {
+        width: 100%;  
+    }
 }
 
