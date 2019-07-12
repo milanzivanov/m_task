@@ -55,7 +55,7 @@ body {
   align-items: center; }
   .main .box {
     background-color: aqua;
-    flex: 0 0 calc(33.333% - 50px);
+    flex: 0 0 calc(33.333% - 30px);
     margin: 5px;
     padding: 10px;
     height: calc(33.333% - 30px);
